@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo o DOM</title>
+    <style>
+        body {
+            background: rgb(109, 109, 207);
+            color: coral;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desvendando o DOM</h1>
+    <p>Aqui vai o resultado...</p>
+    <p>Vamos utilizar o <Strong>DOM</Strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var par = window.document.getElementsByTagName('p')[1]
+        window.document.write(par.innerHTML)
+        var d = window.document.getElementById('msg')
+        var corpo = window.document.body
+        d.style.background = 'black'
+        //d.innerText = 'olá'
+        window.document.getElementById('msg').innerText = 'óla'
+    </script>
+</body>
+</html>
