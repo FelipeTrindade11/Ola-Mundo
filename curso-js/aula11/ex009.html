@@ -5,21 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input#txt {
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
+    
     <h1>Brasileiro ou Estrangeiro?</h1>
     Em que país você está morando: <input type="text" name="txt" id="txt">
     <input type="button" value="Verificar" onclick="conferir()">
-    <p id="res">Resultado</p>
+    <p id="res"></p>
     <script>
         function conferir() {
             var tpais = window.document.getElementById('txt').value
             var res = window.document.getElementById('res')
-            res.innerText = `País em que mora ${tpais}`
+            res.innerHTML = `País em que mora: <strong>${tpais}</strong>`
             if (tpais == 'Brasil') {
-                res.innerHTML += '<div>Você é <strong>brasileiro</strong></div>'
+                res.innerHTML += '<p>Você é <ins>brasileiro</ins></p>'
+                res.innerHTML += '<img src="brasil-bandeira-200.png" alt="Bandeira do Brasil">'
             } else {
-                res.innerHTML += '<div>Você é <strong>estrangeiro</strong></div>'
+                res.innerHTML += '<p>Você é <ins>estrangeiro</ins></p>'
+                res.innerHTML += '<img src="mudial-bandeira-300.png" alt="Bandeira Mundial">'
             }
         }
     </script>
