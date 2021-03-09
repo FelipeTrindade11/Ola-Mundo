@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multa!</h1>
+    Velocidade do veículo <input type="number" name="txtvel" id="txtvel">Km/h 
+    <input type="button" value="Verificar" onclick="medidor()">
+    <p id="res">Resultado</p>
+    <script>
+        function medidor() {
+            var tvel = window.document.getElementById('txtvel')
+            var vel1 = Number(tvel.value)
+            if (vel1 > 60) {
+                window.document.getElementById('res').innerText = 'Você foi multado!'
+            } else {
+                window.document.getElementById('res').innerText = 'Você está dentro da velocidade'
+            }
+        }
+    </script>
+</body>
+</html>
