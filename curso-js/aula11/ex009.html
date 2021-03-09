@@ -9,8 +9,11 @@
         body {
             font: normal 18pt Arial;
         }
+        input {
+            font: normal 12pt Arial;
+        }
         input#txt {
-            width: 100px;
+            width: 150px;
         }
     </style>
 </head>
@@ -25,7 +28,7 @@
             var tpais = window.document.getElementById('txt').value
             var res = window.document.getElementById('res')
             res.innerHTML = `País em que mora: <strong>${tpais}</strong>`
-            if (tpais == 'Brasil') {
+            if (tpais == 'Brasil' || tpais == 'brasil') {
                 res.innerHTML += '<p>Você é <ins>brasileiro</ins></p>'
                 res.innerHTML += '<img src="brasil-bandeira-200.png" alt="Bandeira do Brasil">'
             } else {
