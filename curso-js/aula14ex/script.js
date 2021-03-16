@@ -7,19 +7,17 @@ function contar() {
         passo = 1
         window.alert('Passo não pode ser 0, será considerado 1')
     }
+    res.innerHTML = `&#128073;`
     if (inicio < fim) {
-        res.innerHTML = `&#128073;`
             for (inicio; inicio <= fim; inicio += passo){
                 res.innerHTML += `${inicio} &#128073;`
             }
-        res.innerHTML += `Fim`
     } else {
-        res.innerHTML = `&#128073;`
             for (inicio; inicio >= fim; inicio -= passo){
                 res.innerHTML += `${inicio} &#128073;`
             }
-        res.innerHTML += `Fim`
     }
+    res.innerHTML += `Fim`
 }
 
 
