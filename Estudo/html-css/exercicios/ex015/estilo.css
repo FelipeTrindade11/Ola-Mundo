@@ -1,0 +1,17 @@
+body {
+    background-color: rgba(87, 87, 253, 0.514);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1 {
+    background-color: dodgerblue;
+    color: rgb(211, 49, 138);
+    font-size: 1.5em;
+}
+h2 {
+    color: rgb(221, 42, 42);
+    font-size: 1.2em;
+}
+p {
+    text-align: justify;
+}
